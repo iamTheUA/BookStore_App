@@ -1,26 +1,29 @@
+import { ForgetPasswordComponent } from './components/user/forget-password-component/forget-password.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponentComponent } from './components/user/login-component/login-component.component';
-import { RegisterComponentComponent } from './components/user/register-component/register-component.component';
-import { ForgetPasswordComponentComponent } from './components/user/forget-password-component/forget-password-component.component';
-import { ResetPasswordComponentComponent } from './components/user/reset-password-component/reset-password-component.component';
+import { LoginComponent } from './components/user/login-component/login.component';
+import { SigninComponent } from './components/user/signin/signin.component';
+import { ResetPasswordComponent } from './components/user/reset-password/reset-password.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponentComponent,
-    RegisterComponentComponent,
-    ForgetPasswordComponentComponent,
-    ResetPasswordComponentComponent,
+    LoginComponent,
+    ForgetPasswordComponent,
+    routingComponents,
+    SigninComponent,
+    ResetPasswordComponent
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

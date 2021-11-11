@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegisterComponentComponent } from './register-component.component';
+import { ForgetPasswordComponent } from './forget-password.component';
 
-describe('RegisterComponentComponent', () => {
-  let component: RegisterComponentComponent;
-  let fixture: ComponentFixture<RegisterComponentComponent>;
+describe('ForgetPasswordComponent', () => {
+  let component: ForgetPasswordComponent;
+  let fixture: ComponentFixture<ForgetPasswordComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegisterComponentComponent ]
+      declarations: [ ForgetPasswordComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RegisterComponentComponent);
+    fixture = TestBed.createComponent(ForgetPasswordComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
