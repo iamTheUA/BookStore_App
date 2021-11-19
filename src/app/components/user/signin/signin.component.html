@@ -1,1 +1,46 @@
-<p>signin works!</p>
+<body class="body">
+    
+    <div class="main-block1">
+        <img class="login-img" src="../../../../assets/images/2766594.png" alt="">
+        <div class="tagline">ONLINE BOOK SHOPPING</div>
+    </div>
+    <div class="main-details">
+        <div class="row">
+            <a class="links" routerLink="/login" routerLinkActive="True">
+            <div class="login">
+                LOGIN
+            </div>
+        </a>
+            <div class="signup">
+                SIGNUP
+            </div>
+        </div>
+        <div class="row-underline">
+            <div class="login-block"></div>
+            <div class="signin-block"></div>
+        </div>
+        <div class="input-row">
+            <label class="label">Full Name</label>
+            <input  class="input" type="text">
+        </div>
+        <div class="input-row">
+            <label class="label">Email Id</label>
+            <input  class="input" type="email"> 
+        </div>
+        <div class="input-row">
+            <label class="label">Password</label>
+            <input  class="input" type="password">
+        </div>
+        <div class="input-row">
+            <label class="label">Mobile Number</label>
+            <input  class="input" type="tel">
+        </div>
+
+        <div class="invalid" [hidden]="true">
+            invalid credentials
+        </div>
+        <div class="row">
+            <button class="login-button">Signup</button>
+        </div>
+    </div>
+</body>

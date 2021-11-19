@@ -1,3 +1,7 @@
+import { AuthIntercaptor } from './services/auth.interceptor';
+import { UserService } from './services/user/user.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ForgetPasswordComponent } from './components/user/forget-password-component/forget-password.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,6 +17,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/user/login-component/login.component';
 import { SigninComponent } from './components/user/signin/signin.component';
 import { ResetPasswordComponent } from './components/user/reset-password/reset-password.component';
+import { AuthGuard } from './services/auth.guard';
 
 
 @NgModule({
@@ -30,9 +35,11 @@ import { ResetPasswordComponent } from './components/user/reset-password/reset-p
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [UserService , AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
