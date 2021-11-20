@@ -6,6 +6,7 @@ import { ForgetPasswordComponent } from './components/user/forget-password-compo
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon'
+import { MatError, MatFormFieldModule } from '@angular/material/form-field';
 import { HeaderComponent } from './components/user/header/header.component';
 import { HeaderSearchComponent } from './components/user/header-search/header-search.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
@@ -19,6 +20,7 @@ import { BooklistComponent } from './components/user/booklist/booklist.component
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     FormsModule,
     MatCardModule,
     MatPaginatorModule,
-    MatTabsModule
+    MatTabsModule,
+    MatFormFieldModule,
+    MatCardModule,
   ],
   providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]

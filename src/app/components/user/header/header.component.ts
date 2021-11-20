@@ -10,18 +10,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  @ViewChild(MatPaginator)
-  paginator!: MatPaginator;
-  length = 128;
-  pageSize = 12;
-  pageSizeOptions: number[] = [1, 2, 3, 4];
 
-
-  ngAfterViewInit() {
-    this.paginator.page.subscribe(
-      (event) => console.log(event)
-    );
-  }
 
   ngOnInit(): void {
   }

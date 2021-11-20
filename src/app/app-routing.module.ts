@@ -8,6 +8,7 @@ import { ResetPasswordComponent } from './components/user/reset-password/reset-p
 import { HeaderSearchComponent } from './components/user/header-search/header-search.component';
 import { FooterComponent } from './components/user/footer/footer.component';
 import { BooklistComponent } from './components/user/booklist/booklist.component';
+import { ForgetPasswordComponent } from './components/user/forget-password-component/forget-password.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "footer", component: FooterComponent },
   { path: "headersearch", component: HeaderSearchComponent },
   { path: "booklist", component: BooklistComponent },
+  { path: "forget-password", component: ForgetPasswordComponent }
 ];
 
 @NgModule({
@@ -26,4 +28,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 export const routingComponents = [LoginComponent, HeaderComponent, ResetPasswordComponent, SigninComponent,
-  HeaderSearchComponent, FooterComponent, BooklistComponent]
+  HeaderSearchComponent, FooterComponent, BooklistComponent, ForgetPasswordComponent]
