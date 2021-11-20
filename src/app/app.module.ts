@@ -6,19 +6,19 @@ import { ForgetPasswordComponent } from './components/user/forget-password-compo
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon'
-
-
 import { HeaderComponent } from './components/user/header/header.component';
 import { HeaderSearchComponent } from './components/user/header-search/header-search.component';
-
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/user/login-component/login.component';
 import { SigninComponent } from './components/user/signin/signin.component';
 import { ResetPasswordComponent } from './components/user/reset-password/reset-password.component';
 import { AuthGuard } from './services/auth.guard';
-
+import { FooterComponent } from './components/user/footer/footer.component';
+import { BooklistComponent } from './components/user/booklist/booklist.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,9 @@ import { AuthGuard } from './services/auth.guard';
     ForgetPasswordComponent,
     routingComponents,
     SigninComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    FooterComponent,
+    BooklistComponent,
 
   ],
   imports: [
@@ -37,9 +39,12 @@ import { AuthGuard } from './services/auth.guard';
     AppRoutingModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatTabsModule
   ],
-  providers: [UserService , AuthGuard],
+  providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
