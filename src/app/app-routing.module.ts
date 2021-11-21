@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: "footer", component: FooterComponent },
   { path: "headersearch", component: HeaderSearchComponent },
   { path: "booklist", component: BooklistComponent },
-  { path: "forget-password", component: ForgetPasswordComponent }
+  { path: "forget-password", component: ForgetPasswordComponent },
+  { path: "reset-pasword",   component:ResetPasswordComponent}
 ];
 
 @NgModule({
