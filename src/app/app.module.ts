@@ -20,6 +20,7 @@ import { BooklistComponent } from './components/user/booklist/booklist.component
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { LoginRequestComponent } from './components/user/login-request/login-request.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ResetPasswordComponent,
     FooterComponent,
     BooklistComponent,
+    LoginRequestComponent,
 
   ],
   imports: [
