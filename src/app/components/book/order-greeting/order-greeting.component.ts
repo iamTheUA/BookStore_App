@@ -10,6 +10,7 @@ export class OrderGreetingComponent implements OnInit {
 
   constructor() { }
 
+  
   ngOnInit(): void {
   }
 
