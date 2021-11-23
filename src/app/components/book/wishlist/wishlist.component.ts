@@ -9,6 +9,7 @@ export class WishlistComponent implements OnInit {
 
   constructor() { }
 
+  
   ngOnInit(): void {
   }
 
