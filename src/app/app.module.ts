@@ -20,7 +20,9 @@ import { BooklistComponent } from './components/user/booklist/booklist.component
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { OrderGreetingComponent } from './components/book/order-greeting/order-greeting.component';
+import { WishlistComponent } from './components/book/wishlist/wishlist.component';
+import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +36,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ResetPasswordComponent,
     FooterComponent,
     BooklistComponent,
-
+    OrderGreetingComponent,
+    WishlistComponent,
+    PersonalDetailsComponent,
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

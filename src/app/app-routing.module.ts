@@ -9,6 +9,9 @@ import { HeaderSearchComponent } from './components/user/header-search/header-se
 import { FooterComponent } from './components/user/footer/footer.component';
 import { BooklistComponent } from './components/user/booklist/booklist.component';
 import { ForgetPasswordComponent } from './components/user/forget-password-component/forget-password.component';
+import { OrderGreetingComponent } from './components/book/order-greeting/order-greeting.component';
+import { WishlistComponent } from './components/book/wishlist/wishlist.component';
+import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 
 
 const routes: Routes = [
@@ -18,7 +21,10 @@ const routes: Routes = [
   { path: "footer", component: FooterComponent },
   { path: "headersearch", component: HeaderSearchComponent },
   { path: "booklist", component: BooklistComponent },
-  { path: "forget-password", component: ForgetPasswordComponent }
+  { path: "forget-password", component: ForgetPasswordComponent },
+  { path: "greeting", component: OrderGreetingComponent},
+  { path: "wishlist", component: WishlistComponent},
+  { path: "personal-details", component: PersonalDetailsComponent}
 ];
 
 @NgModule({
