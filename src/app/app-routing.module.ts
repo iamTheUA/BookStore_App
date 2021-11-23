@@ -6,7 +6,6 @@ import { LoginComponent } from './components/user/login-component/login.componen
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/user/header/header.component';
-import { ResetPasswordComponent } from './components/user/reset-password/reset-password.component';
 import { HeaderSearchComponent } from './components/user/header-search/header-search.component';
 import { FooterComponent } from './components/user/footer/footer.component';
 import { BooklistComponent } from './components/user/booklist/booklist.component';
@@ -18,15 +17,11 @@ const routes: Routes = [
   {path:"signup", component:SigninComponent},
   {path:"reset-password", component:ResetPasswordComponent},
   {path:"book-details", component:BookDetailsComponent},
-
-  
-
   { path: "header", component: HeaderComponent },
   { path: "footer", component: FooterComponent },
   { path: "headersearch", component: HeaderSearchComponent },
   { path: "booklist", component: BooklistComponent },
   { path: "forget-password", component: ForgetPasswordComponent },
-
   { path: "login-request",component:LoginRequestComponent}
 ];
 
@@ -37,4 +32,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 export const routingComponents = [LoginComponent, HeaderComponent, ResetPasswordComponent, SigninComponent,
-  HeaderSearchComponent, FooterComponent, BooklistComponent, ForgetPasswordComponent, BookDetailsComponent]
+  HeaderSearchComponent, FooterComponent, BooklistComponent, ForgetPasswordComponent, BookDetailsComponent, LoginRequestComponent]

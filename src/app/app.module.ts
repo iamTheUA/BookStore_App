@@ -1,4 +1,4 @@
-import { MatTabsModule } from '@angular/material/tabs';
+
 import { AuthIntercaptor } from './services/auth.interceptor';
 import { UserService } from './services/user/user.service';
 import { FormsModule } from '@angular/forms';
@@ -34,13 +34,6 @@ import { LoginRequestComponent } from './components/user/login-request/login-req
     routingComponents,
     SigninComponent,
     ResetPasswordComponent,
-<<<<<<< HEAD
-    BookDetailsComponent
-=======
-    FooterComponent,
-    BooklistComponent,
-    LoginRequestComponent,
->>>>>>> 50ddbe952fb7bf4529ccd81d06411d0c129a9acc
 
   ],
   imports: [
@@ -49,15 +42,10 @@ import { LoginRequestComponent } from './components/user/login-request/login-req
     MatIconModule,
     HttpClientModule,
     FormsModule,
-<<<<<<< HEAD
-    MatTabsModule
-=======
     MatCardModule,
     MatPaginatorModule,
-    MatTabsModule,
     MatFormFieldModule,
     MatCardModule,
->>>>>>> 50ddbe952fb7bf4529ccd81d06411d0c129a9acc
   ],
   providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]
