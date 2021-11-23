@@ -9,6 +9,7 @@ import { HeaderSearchComponent } from './components/user/header-search/header-se
 import { FooterComponent } from './components/user/footer/footer.component';
 import { BooklistComponent } from './components/user/booklist/booklist.component';
 import { ForgetPasswordComponent } from './components/user/forget-password-component/forget-password.component';
+import { MyordersComponent } from './components/user/myorders/myorders.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: "footer", component: FooterComponent },
   { path: "headersearch", component: HeaderSearchComponent },
   { path: "booklist", component: BooklistComponent },
-  { path: "forget-password", component: ForgetPasswordComponent }
+  { path: "forgetpassword", component: ForgetPasswordComponent },
+  { path: "myorders", component: MyordersComponent }
 ];
 
 @NgModule({
@@ -28,4 +30,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 export const routingComponents = [LoginComponent, HeaderComponent, ResetPasswordComponent, SigninComponent,
-  HeaderSearchComponent, FooterComponent, BooklistComponent, ForgetPasswordComponent]
+  HeaderSearchComponent, FooterComponent, BooklistComponent, ForgetPasswordComponent, MyordersComponent]
