@@ -1,3 +1,4 @@
+
 import { AuthIntercaptor } from './services/auth.interceptor';
 import { UserService } from './services/user/user.service';
 import { FormsModule } from '@angular/forms';
@@ -15,14 +16,19 @@ import { LoginComponent } from './components/user/login-component/login.componen
 import { SigninComponent } from './components/user/signin/signin.component';
 import { ResetPasswordComponent } from './components/user/reset-password/reset-password.component';
 import { AuthGuard } from './services/auth.guard';
+import { BookDetailsComponent } from './components/book/book-details/book-details.component';
 import { FooterComponent } from './components/user/footer/footer.component';
 import { BooklistComponent } from './components/user/booklist/booklist.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatTabsModule } from '@angular/material/tabs';
 import { MatPaginatorModule } from '@angular/material/paginator';
+<<<<<<< HEAD
 import { OrderGreetingComponent } from './components/book/order-greeting/order-greeting.component';
 import { WishlistComponent } from './components/book/wishlist/wishlist.component';
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
+=======
+import { LoginRequestComponent } from './components/user/login-request/login-request.component';
+
+>>>>>>> f8a2c3febb51408167ee3ef0d448f8928e13f128
 
 @NgModule({
   declarations: [
@@ -34,11 +40,15 @@ import { PersonalDetailsComponent } from './components/user/personal-details/per
     routingComponents,
     SigninComponent,
     ResetPasswordComponent,
+<<<<<<< HEAD
     FooterComponent,
     BooklistComponent,
     OrderGreetingComponent,
     WishlistComponent,
     PersonalDetailsComponent,
+=======
+
+>>>>>>> f8a2c3febb51408167ee3ef0d448f8928e13f128
   ],
   
   imports: [
@@ -49,7 +59,6 @@ import { PersonalDetailsComponent } from './components/user/personal-details/per
     FormsModule,
     MatCardModule,
     MatPaginatorModule,
-    MatTabsModule,
     MatFormFieldModule,
     MatCardModule,
   ],
