@@ -7,12 +7,9 @@ import { ForgetPasswordComponent } from './components/user/forget-password-compo
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon'
-
-
+import { MatError, MatFormFieldModule } from '@angular/material/form-field';
 import { HeaderComponent } from './components/user/header/header.component';
 import { HeaderSearchComponent } from './components/user/header-search/header-search.component';
-
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/user/login-component/login.component';
@@ -20,6 +17,11 @@ import { SigninComponent } from './components/user/signin/signin.component';
 import { ResetPasswordComponent } from './components/user/reset-password/reset-password.component';
 import { AuthGuard } from './services/auth.guard';
 import { BookDetailsComponent } from './components/book/book-details/book-details.component';
+import { FooterComponent } from './components/user/footer/footer.component';
+import { BooklistComponent } from './components/user/booklist/booklist.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { LoginRequestComponent } from './components/user/login-request/login-request.component';
 
 
 @NgModule({
@@ -32,7 +34,13 @@ import { BookDetailsComponent } from './components/book/book-details/book-detail
     routingComponents,
     SigninComponent,
     ResetPasswordComponent,
+<<<<<<< HEAD
     BookDetailsComponent
+=======
+    FooterComponent,
+    BooklistComponent,
+    LoginRequestComponent,
+>>>>>>> 50ddbe952fb7bf4529ccd81d06411d0c129a9acc
 
   ],
   imports: [
@@ -41,9 +49,17 @@ import { BookDetailsComponent } from './components/book/book-details/book-detail
     MatIconModule,
     HttpClientModule,
     FormsModule,
+<<<<<<< HEAD
     MatTabsModule
+=======
+    MatCardModule,
+    MatPaginatorModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatCardModule,
+>>>>>>> 50ddbe952fb7bf4529ccd81d06411d0c129a9acc
   ],
-  providers: [UserService , AuthGuard],
+  providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
