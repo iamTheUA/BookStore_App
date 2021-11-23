@@ -1,3 +1,4 @@
+import { MatTabsModule } from '@angular/material/tabs';
 import { AuthIntercaptor } from './services/auth.interceptor';
 import { UserService } from './services/user/user.service';
 import { FormsModule } from '@angular/forms';
@@ -18,6 +19,7 @@ import { LoginComponent } from './components/user/login-component/login.componen
 import { SigninComponent } from './components/user/signin/signin.component';
 import { ResetPasswordComponent } from './components/user/reset-password/reset-password.component';
 import { AuthGuard } from './services/auth.guard';
+import { BookDetailsComponent } from './components/book/book-details/book-details.component';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { AuthGuard } from './services/auth.guard';
     ForgetPasswordComponent,
     routingComponents,
     SigninComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    BookDetailsComponent
 
   ],
   imports: [
@@ -37,7 +40,8 @@ import { AuthGuard } from './services/auth.guard';
     AppRoutingModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatTabsModule
   ],
   providers: [UserService , AuthGuard],
   bootstrap: [AppComponent]
