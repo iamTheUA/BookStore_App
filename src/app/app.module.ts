@@ -6,6 +6,7 @@ import { ForgetPasswordComponent } from './components/user/forget-password-compo
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon'
+import { MatExpansionModule } from '@angular/material/expansion'
 import { MatError, MatFormFieldModule } from '@angular/material/form-field';
 import { HeaderComponent } from './components/user/header/header.component';
 import { HeaderSearchComponent } from './components/user/header-search/header-search.component';
@@ -15,12 +16,14 @@ import { LoginComponent } from './components/user/login-component/login.componen
 import { SigninComponent } from './components/user/signin/signin.component';
 import { ResetPasswordComponent } from './components/user/reset-password/reset-password.component';
 import { AuthGuard } from './services/auth.guard';
+import { BookDetailsComponent } from './components/book/book-details/book-details.component';
 import { FooterComponent } from './components/user/footer/footer.component';
-import { BooklistComponent } from './components/user/booklist/booklist.component';
+import { BooklistComponent } from './components/book/booklist/booklist.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatTabsModule } from '@angular/material/tabs';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MyordersComponent } from './components/user/myorders/myorders.component';
+import { LoginRequestComponent } from './components/user/login-request/login-request.component';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 
 @NgModule({
@@ -33,9 +36,7 @@ import { MyordersComponent } from './components/user/myorders/myorders.component
     routingComponents,
     SigninComponent,
     ResetPasswordComponent,
-    FooterComponent,
-    BooklistComponent,
-    MyordersComponent,
+    FooterComponent
 
   ],
   imports: [
@@ -46,9 +47,10 @@ import { MyordersComponent } from './components/user/myorders/myorders.component
     FormsModule,
     MatCardModule,
     MatPaginatorModule,
-    MatTabsModule,
     MatFormFieldModule,
     MatCardModule,
+    MatExpansionModule,
+    MatRadioModule
   ],
   providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]

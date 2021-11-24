@@ -175,3 +175,14 @@
         color:rgb(255, 75, 75);
     }
 }
+
+.mat-tab-group {
+    margin-bottom: 48px;
+   
+  }
+  .cdk-mouse-focused{
+
+  }
+  ng:mat-tab-label:focus{
+    border-bottom: 2px solid black !important;;
+  }
