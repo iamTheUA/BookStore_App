@@ -1,0 +1,68 @@
+<app-header-search></app-header-search>
+<div class="head">
+    <span class="home">Home / </span>
+    <span class="profile">Profile</span>
+</div>
+<div class="main-container">
+    <span class="h1">Personal details</span>
+    <span class="edit">Edit</span>
+
+    <div class="input-row">
+        <label class="label">Full Name</label>
+        <input class="input" type="text" placeholder=" Enter full name">
+    </div>
+    <div class="input-row">
+        <label class="label">Email Id</label>
+        <input class="input" type="email" placeholder="Enter Email address">
+    </div>
+    <div class="input-row">
+        <label class="label">Password</label>
+        <input class="input" type="password" placeholder=" Enter password">
+    </div>
+    <div class="input-row">
+        <label class="label">Mobile Number</label>
+        <input class="input" type="tel" placeholder=" Enter Mobile No">
+    </div>
+    <div class="h1">
+        <h3>Address Details
+            <button mat-button class="new" style="
+              height: 35px;
+              width: 130px;
+              background-color: #ffffff;
+              color: rgb(153, 3, 3);
+              border-radius: 1px;
+              border-color: rgb(155, 4, 4);
+              font-family: Roboto;
+            " (click)="onClickClear()" [routerLink]="['']">
+            Add New User
+          </button>
+        </h3>
+    </div>
+    <span class="h1">1.WORK</span>
+    <span class="edit">Edit</span>
+    <div class="input-row">
+        <label class="label">Address</label>
+        <input class="input2" type="tel" placeholder=" Enter your Address">
+    </div>
+    <div class="input-row">
+        <label class="label">City/town</label>
+        <input class="input3" type="tel" placeholder=" Enter your City ">
+    </div>
+    <div class="type"><span>Type</span></div>
+    <div class="input-row2">
+        <label class="label">State</label>
+        <input class="input3" type="tel" placeholder=" Enter your State">
+    </div>
+    <div class="radio1">
+        <input type="radio">
+        <label for="home">Home</label><br>
+    </div>
+    <div class="radio2">
+        <input type="radio">
+        <label for="css">Work</label><br>
+    </div>
+    <div class="radio3">
+        <input type="radio">
+        <label for="javascript">Other</label>
+    </div>
+</div>

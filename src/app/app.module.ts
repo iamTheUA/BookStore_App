@@ -24,6 +24,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { LoginRequestComponent } from './components/user/login-request/login-request.component';
 import { MatRadioModule } from '@angular/material/radio';
 
+import { OrderGreetingComponent } from './components/book/order-greeting/order-greeting.component';
+import { WishlistComponent } from './components/book/wishlist/wishlist.component';
+import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 
 
 @NgModule({
@@ -36,9 +39,14 @@ import { MatRadioModule } from '@angular/material/radio';
     routingComponents,
     SigninComponent,
     ResetPasswordComponent,
-    FooterComponent
+    FooterComponent,
+    BooklistComponent,
+    OrderGreetingComponent,
+    WishlistComponent,
+    PersonalDetailsComponent,
 
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

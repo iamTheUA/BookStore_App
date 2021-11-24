@@ -12,6 +12,9 @@ import { BooklistComponent } from './components/book/booklist/booklist.component
 import { ForgetPasswordComponent } from './components/user/forget-password-component/forget-password.component';
 import { MyordersComponent } from './components/user/myorders/myorders.component';
 import { LoginRequestComponent } from './components/user/login-request/login-request.component';
+import { OrderGreetingComponent } from './components/book/order-greeting/order-greeting.component';
+import { WishlistComponent } from './components/book/wishlist/wishlist.component';
+import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -26,6 +29,10 @@ const routes: Routes = [
   { path: "forget-password", component: ForgetPasswordComponent },
   { path: "login-request", component: LoginRequestComponent },
 
+  { path: "greeting", component: OrderGreetingComponent },
+  { path: "wishlist", component: WishlistComponent },
+  { path: "personal-details", component: PersonalDetailsComponent },
+  { path: "login-request", component: LoginRequestComponent }
 ];
 
 @NgModule({
