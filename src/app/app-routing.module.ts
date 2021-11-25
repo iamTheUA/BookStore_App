@@ -16,6 +16,7 @@ import { OrderGreetingComponent } from './components/book/order-greeting/order-g
 import { WishlistComponent } from './components/book/wishlist/wishlist.component';
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 import { CartComponent } from './components/book/cart/cart.component';
+import { PlaceOrderRequestComponent } from './components/book/place-order-request/place-order-request.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: "wishlist", component: WishlistComponent },
   { path: "login-request", component: LoginRequestComponent },
   { path: "cart", component: CartComponent },
+  { path: "place-order-request",component:PlaceOrderRequestComponent}
 
 ];
 
@@ -48,4 +50,4 @@ export class AppRoutingModule { }
 
 export const routingComponents = [LoginComponent, HeaderComponent, ResetPasswordComponent, SigninComponent,
   HeaderSearchComponent, FooterComponent, BooklistComponent, ForgetPasswordComponent, BookDetailsComponent,
-  LoginRequestComponent]
+  LoginRequestComponent,PlaceOrderRequestComponent]
