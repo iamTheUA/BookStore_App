@@ -25,4 +25,13 @@ export class BooklistComponent implements OnInit {
 
   }
 
+  onClick(n: number) {
+    this.routerlink.navigate(["/book-details/" + n])
+
+  }
+
+
+
+
+
 }
