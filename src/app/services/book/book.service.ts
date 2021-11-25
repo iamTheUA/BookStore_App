@@ -15,4 +15,8 @@ export class BookService {
 
     return this.http.get<any>(this.baseUrl + "/book/")
   }
+
+  getBookById(n:number){
+    return this.http.get<any>(this.baseUrl+"/book/"+n)
+  }
 }

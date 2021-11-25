@@ -9,33 +9,31 @@
 </div>
 <div class="alinebody">
     <div class="body">
+
         <mat-card class="main_card" *ngFor="let book of Books">
-
-            <div class=" book_image">
-                <img src="../../../../assets/images/Image 10@2x.png" alt="book" class="book_img">
-            </div>
-
-            <div class="book_name">
-                {{book.name}}
-            </div>
-            <div class="author_name">
-                {{book.author}}
-            </div>
-            <div class="book_rating">
-                <div class="rating_num">{{book.rating}}</div>
-                <div>
-                    <mat-icon class="rating_star">star</mat-icon>
+            <div (click)="onClick(book.id)">
+                <div class=" book_image">
+                    <img src="../../../../assets/images/Image 10@2x.png" alt="book" class="book_img">
                 </div>
-                <!-- <div class="quanty">
-                    (20)
-                </div> -->
-            </div>
 
-            <div class="price">
-                <div class="book_price">Rs.{{book.price}}</div>
-                <div class="discount_price">Rs.{{book.price}}</div>
-            </div>
+                <div class="book_name">
+                    {{book.name}}
+                </div>
+                <div class="author_name">
+                    {{book.author}}
+                </div>
+                <div class="rating-container">
+                    <div class="rating-box">
+                        {{book.rating}}
+                        <mat-icon class="star">star</mat-icon>
+                    </div>
+                </div>
 
+                <div class="price">
+                    <div class="book_price">Rs.{{book.price}}</div>
+                    <div class="discount_price">Rs.{{book.price}}</div>
+                </div>
+            </div>
         </mat-card>
     </div>
 </div>
