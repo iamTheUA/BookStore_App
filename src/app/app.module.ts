@@ -29,6 +29,7 @@ import { PersonalDetailsComponent } from './components/user/personal-details/per
 import { CartComponent } from './components/book/cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlaceOrderRequestComponent } from './components/book/place-order-request/place-order-request.component';
+import { CustomerOrderSummaryComponent } from './components/book/customer-order-summary/customer-order-summary.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { PlaceOrderRequestComponent } from './components/book/place-order-reques
     PersonalDetailsComponent,
     CartComponent,
     PlaceOrderRequestComponent,
+    CustomerOrderSummaryComponent,
 
   ],
 
