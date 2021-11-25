@@ -1,5 +1,6 @@
 import { UserService } from './../../../services/user/user.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,26 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  credential={
-    emailId:"",
-    password:""
+  credential = {
+    emailId: "",
+    password: ""
   }
 
-  wrongCredential:boolean=false
+  wrongCredential: boolean = false
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private routerlink: Router) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.credential)
-    this.userService.generateToken(this.credential).subscribe((response:any)=>
-    {
+    this.userService.generateToken(this.credential).subscribe((response: any) => {
       console.log(response.token)
       this.userService.loginUser(response.token)
-      window.location.href="https://www.google.co.in"
+      this.routerlink.navigate(["/booklist"])
     },
-    error=> {console.log(error); this.wrongCredential=true} )
+      error => { console.log(error); this.wrongCredential = true })
   }
 }

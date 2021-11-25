@@ -19,20 +19,19 @@ import { PersonalDetailsComponent } from './components/user/personal-details/per
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "signup", component: SigninComponent },
-  { path: "reset-password", component: ResetPasswordComponent },
-  { path: "book-details", component: BookDetailsComponent },
+  { path: "resetpassword/:token", component: ResetPasswordComponent },
+  { path: "bookdetails", component: BookDetailsComponent },
   { path: "header", component: HeaderComponent },
   { path: "footer", component: FooterComponent },
   { path: "headersearch", component: HeaderSearchComponent },
-  { path: "book-list", component: BooklistComponent },
+  { path: "booklist", component: BooklistComponent },
   { path: "myorders", component: MyordersComponent },
   { path: "forget-password", component: ForgetPasswordComponent },
   { path: "login-request", component: LoginRequestComponent },
-
   { path: "greeting", component: OrderGreetingComponent },
   { path: "wishlist", component: WishlistComponent },
   { path: "personal-details", component: PersonalDetailsComponent },
-  { path: "login-request", component: LoginRequestComponent }
+  { path: "loginrequest", component: LoginRequestComponent }
 ];
 
 @NgModule({

@@ -1,41 +1,56 @@
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
+import { singInModel } from 'src/app/model/singinmodel';
+import { passwordForgetModel } from 'src/app/model/passwordforgetmodel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  baseUrl=environment.baseUrl;
+  baseUrl = environment.baseUrl;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
 
-  generateToken(credentials:any){
-    return this.http.post(this.baseUrl+"/token", credentials)
+  generateToken(credentials: any) {
+    return this.http.post(this.baseUrl + "/token", credentials)
   }
 
-  loginUser(token:any){
+  loginUser(token: any) {
     localStorage.setItem("token", token)
     return true
   }
 
-  isLoggedIn(){
-    let token=localStorage.getItem("token");
-    if(token==null || token===""){
+  isLoggedIn() {
+    let token = localStorage.getItem("token");
+    if (token == null || token === "") {
       return false;
-    }else{
+    } else {
       return true;
     }
   }
 
-  logout(){
+  logout() {
     localStorage.removeItem("token")
     return true;
   }
 
-  getToken(){
+  getToken() {
     return localStorage.getItem("token")
+  }
+
+  signinUser(userInFo: singInModel) {
+    return this.http.post<any>(this.baseUrl + '/signup', userInFo)
+  }
+
+
+  passwordForget(emailId: String) {
+    return this.http.get<any>(this.baseUrl + '/forget-password/' + emailId)
+  }
+
+  passwordReset(inputToken: string, inputNewPassword: string) {
+    return this.http.put<any>(this.baseUrl + '/reset-password', { token: inputToken, newpassword: inputNewPassword })
   }
 }

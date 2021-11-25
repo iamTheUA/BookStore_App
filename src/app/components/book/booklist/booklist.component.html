@@ -6,22 +6,23 @@
         <span style="font-size: 12px; color: grey; padding-top: 9px ;padding-inline-start: 6px;">
             (128 items)</span>
     </div>
-
+</div>
+<div class="alinebody">
     <div class="body">
-        <mat-card class="main_card">
+        <mat-card class="main_card" *ngFor="let book of Books">
 
-            <div class="book_image">
+            <div class=" book_image">
                 <img src="../../../../assets/images/Image 10@2x.png" alt="book" class="book_img">
             </div>
 
             <div class="book_name">
-                Don't Make Me Think
+                {{book.name}}
             </div>
             <div class="author_name">
-                by Steve Krug
+                {{book.author}}
             </div>
             <div class="book_rating">
-                <div class="rating_num">4.5</div>
+                <div class="rating_num">{{book.rating}}</div>
                 <div>
                     <mat-icon class="rating_star">star</mat-icon>
                 </div>
@@ -31,29 +32,14 @@
             </div>
 
             <div class="price">
-                <div class="book_price">Rs.1500</div>
-                <div class="discount_price">Rs.2000</div>
+                <div class="book_price">Rs.{{book.price}}</div>
+                <div class="discount_price">Rs.{{book.price}}</div>
             </div>
 
         </mat-card>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<app-footer></app-footer>
+<!-- <div>
+    <app-footer></app-footer>
+</div> -->

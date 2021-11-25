@@ -33,14 +33,16 @@
     margin-top      : -16px;
  }
  
-
+.alinebody{
+   background-color: #388E3C;
+}
  .body {
     display      : flex;
     flex-flow    : row wrap;
     box-sizing   : border-box;
     place-content: center;
     align-items  : center;
-    gap          : 10px;
+    gap          : 48px;
     position: absolute;
     padding-top: 66px;
  }
