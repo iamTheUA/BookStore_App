@@ -15,7 +15,7 @@ import {LoginRequestComponent } from './components/user/login-request/login-requ
 const routes: Routes = [
   {path:"login", component:LoginComponent},
   {path:"signup", component:SigninComponent},
-  {path:"reset-password", component:ResetPasswordComponent},
+  {path:"reset-password/:token", component:ResetPasswordComponent},
   {path:"book-details", component:BookDetailsComponent},
   { path: "header", component: HeaderComponent },
   { path: "footer", component: FooterComponent },

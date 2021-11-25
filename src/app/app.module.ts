@@ -22,6 +22,8 @@ import { BooklistComponent } from './components/user/booklist/booklist.component
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { LoginRequestComponent } from './components/user/login-request/login-request.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -30,7 +32,7 @@ import { LoginRequestComponent } from './components/user/login-request/login-req
     HeaderComponent,
     HeaderSearchComponent,
     LoginComponent,
-    ForgetPasswordComponent,
+    ForgetPasswordComponent, 
     routingComponents,
     SigninComponent,
     ResetPasswordComponent,
@@ -46,6 +48,8 @@ import { LoginRequestComponent } from './components/user/login-request/login-req
     MatPaginatorModule,
     MatFormFieldModule,
     MatCardModule,
+    MatMenuModule,
+    BrowserAnimationsModule
   ],
   providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]
