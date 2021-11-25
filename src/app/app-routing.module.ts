@@ -15,11 +15,12 @@ import { LoginRequestComponent } from './components/user/login-request/login-req
 import { OrderGreetingComponent } from './components/book/order-greeting/order-greeting.component';
 import { WishlistComponent } from './components/book/wishlist/wishlist.component';
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
+import { CartComponent } from './components/book/cart/cart.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "signup", component: SigninComponent },
-  { path: "resetpassword/:token", component: ResetPasswordComponent },
+  { path: "reset-password/:token", component: ResetPasswordComponent },
   { path: "bookdetails", component: BookDetailsComponent },
   { path: "header", component: HeaderComponent },
   { path: "footer", component: FooterComponent },
@@ -31,7 +32,12 @@ const routes: Routes = [
   { path: "greeting", component: OrderGreetingComponent },
   { path: "wishlist", component: WishlistComponent },
   { path: "personal-details", component: PersonalDetailsComponent },
-  { path: "loginrequest", component: LoginRequestComponent }
+  { path: "loginrequest", component: LoginRequestComponent },
+  { path: "greeting", component: OrderGreetingComponent },
+  { path: "wishlist", component: WishlistComponent },
+  { path: "login-request", component: LoginRequestComponent },
+  { path: "cart", component: CartComponent },
+
 ];
 
 @NgModule({

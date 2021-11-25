@@ -3,6 +3,7 @@ import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { singInModel } from 'src/app/model/singinmodel';
 import { passwordForgetModel } from 'src/app/model/passwordforgetmodel';
+import { addressModel } from 'src/app/model/addressmode';
 
 @Injectable({
   providedIn: 'root'
@@ -51,6 +52,10 @@ export class UserService {
   }
 
   passwordReset(inputToken: string, inputNewPassword: string) {
-    return this.http.put<any>(this.baseUrl + '/reset-password', { token: inputToken, newpassword: inputNewPassword })
+    return this.http.post<any>(this.baseUrl + '/reset-password', { "token": inputToken, "newPassword": inputNewPassword })
+  }
+
+  userAddress(addressInfo: addressModel, inputuserId: number) {
+    return this.http.post<any>(this.baseUrl + '/address/' + inputuserId, addressInfo)
   }
 }

@@ -22,13 +22,13 @@
     
     .h1 {
         font-family: Roboto;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
     }
     
     .edit {
         margin-left: 15px;
-        font-size: 12px;
+        font-size: 13px;
         font-family: Roboto;
         font-weight: bold;
         color: rgb(155, 4, 4);
@@ -88,6 +88,16 @@
         border-style: solid;
     }
     
+    .new {
+        height: 35px;
+        width: 130px;
+        background-color: #ffffff;
+        color: rgb(129, 1, 1);
+        border-radius: 1px;
+        border-color: rgb(134, 3, 3);
+        font-family: Roboto;
+    }
+    
     .input3 {
         border-color: #b4b4b4;
         border-width: 1px;
@@ -107,8 +117,35 @@
         font-weight: bold;
     }
     
+    .save {
+        width: 130px;
+        height: 30px;
+        margin-left: 160px;
+        background-color: #0d64b4;
+        color: rgb(249, 249, 250);
+        border-radius: 1px;
+        border-color: rgb(63, 111, 214);
+        font-family: Roboto;
+    }
+    
+    .save2 {
+        width: 130px;
+        height: 30px;
+        margin-left: 220px;
+        background-color: #0d64b4;
+        color: rgb(249, 249, 250);
+        border-radius: 1px;
+        border-color: rgb(63, 111, 214);
+        font-family: Roboto;
+    }
+    
     .radio1 {
         margin-top: 30px;
+    }
+    
+    .homs {
+        font-family: Roboto;
+        font-size: 16px;
     }
     
     .radio2 {
@@ -116,7 +153,17 @@
         margin-left: 140px;
     }
     
+    .work {
+        font-family: Roboto;
+        font-size: 16px;
+    }
+    
     .radio3 {
         margin-top: -20px;
         margin-left: 250px;
+    }
+    
+    .other {
+        font-family: Roboto;
+        font-size: 16px;
     }

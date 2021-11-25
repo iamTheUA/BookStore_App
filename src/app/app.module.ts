@@ -26,6 +26,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { OrderGreetingComponent } from './components/book/order-greeting/order-greeting.component';
 import { WishlistComponent } from './components/book/wishlist/wishlist.component';
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
+import { CartComponent } from './components/book/cart/cart.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { PersonalDetailsComponent } from './components/user/personal-details/per
     OrderGreetingComponent,
     WishlistComponent,
     PersonalDetailsComponent,
+    CartComponent,
 
   ],
 
