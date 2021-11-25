@@ -24,7 +24,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { OrderGreetingComponent } from './components/book/order-greeting/order-greeting.component';
 import { WishlistComponent } from './components/book/wishlist/wishlist.component';
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
-
+import { CartComponent } from './components/book/cart/cart.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { PersonalDetailsComponent } from './components/user/personal-details/per
     OrderGreetingComponent,
     WishlistComponent,
     PersonalDetailsComponent,
+    CartComponent,
 
   ],
   
@@ -54,6 +57,8 @@ import { PersonalDetailsComponent } from './components/user/personal-details/per
     MatPaginatorModule,
     MatFormFieldModule,
     MatCardModule,
+    MatExpansionModule,
+    MatRadioModule
   ],
   providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]

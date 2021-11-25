@@ -1,11 +1,13 @@
 <app-header-search></app-header-search>
 <div class="head">
-    <span class="home">Home / </span>
-    <span class="profile">Profile</span>
+    <span (click)="onClick()" [routerLink]="['']" class="home">Home / </span>
+    <span (click)="onClick()" [routerLink]="['']" class="profile">Profile</span>
 </div>
 <div class="main-container">
     <span class="h1">Personal details</span>
-    <span class="edit">Edit</span>
+    <span *ngIf="hidden" (click)="toggle()" class="edit">Edit</span>
+    <span *ngIf="display" (click)="toggle()" class="edit">Cancel</span>
+    <button *ngIf="display" class="save">Save</button>
 
     <div class="input-row">
         <label class="label">Full Name</label>
@@ -25,21 +27,15 @@
     </div>
     <div class="h1">
         <h3>Address Details
-            <button mat-button class="new" style="
-              height: 35px;
-              width: 130px;
-              background-color: #ffffff;
-              color: rgb(153, 3, 3);
-              border-radius: 1px;
-              border-color: rgb(155, 4, 4);
-              font-family: Roboto;
-            " (click)="onClickClear()" [routerLink]="['']">
+            <button mat-button class="new" (click)="onClickClear()" [routerLink]="['']">
             Add New User
           </button>
         </h3>
     </div>
     <span class="h1">1.WORK</span>
-    <span class="edit">Edit</span>
+    <span *ngIf="hidden" (click)="toggle1()" class="edit">Edit</span>
+    <span *ngIf="display1" (click)="toggle1()" class="edit">Cancel</span>
+    <button *ngIf="display1" class="save2">Save</button>
     <div class="input-row">
         <label class="label">Address</label>
         <input class="input2" type="tel" placeholder=" Enter your Address">
@@ -55,14 +51,14 @@
     </div>
     <div class="radio1">
         <input type="radio">
-        <label for="home">Home</label><br>
+        <label class="homs" for="home">Home</label><br>
     </div>
     <div class="radio2">
         <input type="radio">
-        <label for="css">Work</label><br>
+        <label class="work" for="work">Work</label><br>
     </div>
     <div class="radio3">
         <input type="radio">
-        <label for="javascript">Other</label>
+        <label class="other" for="other">Other</label>
     </div>
 </div>
