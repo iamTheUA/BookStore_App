@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderSearchComponent implements OnInit {
 
+
+  fullDisplay:boolean=true;
+
+  
   constructor() { }
 
   ngOnInit(): void {

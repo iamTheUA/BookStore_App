@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "signup", component: SigninComponent },
   { path: "reset-password/:token", component: ResetPasswordComponent },
-  { path: "bookdetails", component: BookDetailsComponent },
+  { path: "book-details/:bookId", component: BookDetailsComponent },
   { path: "header", component: HeaderComponent },
   { path: "footer", component: FooterComponent },
   { path: "headersearch", component: HeaderSearchComponent },
