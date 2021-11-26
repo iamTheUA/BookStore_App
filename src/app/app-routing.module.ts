@@ -8,9 +8,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/user/header/header.component';
 import { HeaderSearchComponent } from './components/user/header-search/header-search.component';
 import { FooterComponent } from './components/user/footer/footer.component';
-import { BooklistComponent } from './components/user/booklist/booklist.component';
+import { BooklistComponent } from './components/book/booklist/booklist.component';
 import { ForgetPasswordComponent } from './components/user/forget-password-component/forget-password.component';
-import {LoginRequestComponent } from './components/user/login-request/login-request.component';
+import { MyordersComponent } from './components/user/myorders/myorders.component';
+import { LoginRequestComponent } from './components/user/login-request/login-request.component';
 import { OrderGreetingComponent } from './components/book/order-greeting/order-greeting.component';
 import { WishlistComponent } from './components/book/wishlist/wishlist.component';
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
@@ -18,21 +19,30 @@ import { CartComponent } from './components/book/cart/cart.component';
 
 
 
+import { PlaceOrderRequestComponent } from './components/book/place-order-request/place-order-request.component';
+import { CustomerOrderSummaryComponent } from './components/book/customer-order-summary/customer-order-summary.component';
 const routes: Routes = [
-  {path:"login", component:LoginComponent},
-  {path:"signup", component:SigninComponent},
-  {path:"reset-password", component:ResetPasswordComponent},
-  {path:"book-details", component:BookDetailsComponent},
+  { path: "login", component: LoginComponent },
+  { path: "signup", component: SigninComponent },
+  { path: "reset-password/:token", component: ResetPasswordComponent },
+  { path: "book-details/:bookId", component: BookDetailsComponent },
   { path: "header", component: HeaderComponent },
   { path: "footer", component: FooterComponent },
   { path: "headersearch", component: HeaderSearchComponent },
   { path: "booklist", component: BooklistComponent },
+  { path: "myorders", component: MyordersComponent },
   { path: "forget-password", component: ForgetPasswordComponent },
-  { path: "greeting", component: OrderGreetingComponent},
-  { path: "wishlist", component: WishlistComponent},
-  { path: "personal-details", component: PersonalDetailsComponent},
-  { path: "login-request",component:LoginRequestComponent},
-  { path: "cart", component: CartComponent},
+  { path: "login-request", component: LoginRequestComponent },
+  { path: "greeting", component: OrderGreetingComponent },
+  { path: "wishlist", component: WishlistComponent },
+  { path: "personal-details", component: PersonalDetailsComponent },
+  { path: "loginrequest", component: LoginRequestComponent },
+  { path: "greeting", component: OrderGreetingComponent },
+  { path: "wishlist", component: WishlistComponent },
+  { path: "login-request", component: LoginRequestComponent },
+  { path: "cart", component: CartComponent },
+  { path: "place-order-request",component:PlaceOrderRequestComponent},
+  { path: "customer-order-summary",component:CustomerOrderSummaryComponent}
 
 ];
 
@@ -43,4 +53,5 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 export const routingComponents = [LoginComponent, HeaderComponent, ResetPasswordComponent, SigninComponent,
-  HeaderSearchComponent, FooterComponent, BooklistComponent, ForgetPasswordComponent, BookDetailsComponent, LoginRequestComponent]
+  HeaderSearchComponent, FooterComponent, BooklistComponent, ForgetPasswordComponent, BookDetailsComponent,
+  LoginRequestComponent,PlaceOrderRequestComponent,CustomerOrderSummaryComponent]

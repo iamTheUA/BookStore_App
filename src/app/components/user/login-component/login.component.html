@@ -1,5 +1,5 @@
 <body class="body">
-    
+
     <div class="main-block1">
         <img class="login-img" src="../../../../assets/images/2766594.png" alt="">
         <div class="tagline">ONLINE BOOK SHOPPING</div>
@@ -72,10 +72,10 @@
                 LOGIN
             </div>
             <a class="links" routerLink="/signup" routerLinkActive="True">
-            <div class="signup">
-                SIGNUP
-            </div>
-        </a>
+                <div class="signup">
+                    SIGNUP
+                </div>
+            </a>
         </div>
         <div class="row-underline">
             <div class="login-block"></div>
@@ -83,12 +83,14 @@
         </div>
         <div class="email-password-row">
             <label class="label">Email Id</label>
-            <input [(ngModel)]="credential.emailId" class="input" type="email"> 
+            <input [(ngModel)]="credential.emailId" class="input" type="email">
         </div>
         <div class="email-password-row">
             <label class="label">Password</label>
             <input [(ngModel)]="credential.password" class="input" type="password">
-            <div class="forget">Forget Password</div>
+            <a class="links" routerLink="/forget-password" routerLinkActive="True">
+                <div class="forget">Forget Password</div>
+            </a>
         </div>
 
         <div class="invalid" [hidden]="!wrongCredential">
@@ -105,6 +107,6 @@
         <div class="link-row">
             <div class="facebook">facebook</div>
             <div class="google">Google</div>
-        </div> 
+        </div>
     </div>
 </body>
