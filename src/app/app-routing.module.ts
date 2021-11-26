@@ -17,6 +17,10 @@ import { WishlistComponent } from './components/book/wishlist/wishlist.component
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 import { CartComponent } from './components/book/cart/cart.component';
 
+
+
+import { PlaceOrderRequestComponent } from './components/book/place-order-request/place-order-request.component';
+import { CustomerOrderSummaryComponent } from './components/book/customer-order-summary/customer-order-summary.component';
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "signup", component: SigninComponent },
@@ -37,6 +41,8 @@ const routes: Routes = [
   { path: "wishlist", component: WishlistComponent },
   { path: "login-request", component: LoginRequestComponent },
   { path: "cart", component: CartComponent },
+  { path: "place-order-request",component:PlaceOrderRequestComponent},
+  { path: "customer-order-summary",component:CustomerOrderSummaryComponent}
 
 ];
 
@@ -48,4 +54,4 @@ export class AppRoutingModule { }
 
 export const routingComponents = [LoginComponent, HeaderComponent, ResetPasswordComponent, SigninComponent,
   HeaderSearchComponent, FooterComponent, BooklistComponent, ForgetPasswordComponent, BookDetailsComponent,
-  LoginRequestComponent]
+  LoginRequestComponent,PlaceOrderRequestComponent,CustomerOrderSummaryComponent]

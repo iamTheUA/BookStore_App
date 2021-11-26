@@ -28,6 +28,8 @@ import { WishlistComponent } from './components/book/wishlist/wishlist.component
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 import { CartComponent } from './components/book/cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PlaceOrderRequestComponent } from './components/book/place-order-request/place-order-request.component';
+import { CustomerOrderSummaryComponent } from './components/book/customer-order-summary/customer-order-summary.component';
 
 
 
@@ -48,6 +50,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     WishlistComponent,
     PersonalDetailsComponent,
     CartComponent,
+    PlaceOrderRequestComponent,
+    CustomerOrderSummaryComponent,
 
   ],
 

@@ -14,20 +14,20 @@
 
 .home {
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 13px;
     color: #9D9D9D;
 }
 
 .cart {
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     color: #000000;
 }
 
 .title {
     font-family: Roboto;
-    font-size: 21px;
+    font-size: 16px;
     margin-left: 20px;
     font-weight: bold;
     letter-spacing: 0px;
@@ -104,7 +104,7 @@
 
 .booktitle {
     font-family: Roboto;
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 0px;
     color: #0A0102;
     opacity: 1;
@@ -116,7 +116,7 @@
 
 .sub {
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 12px;
     color: #9d9d9d;
     opacity: 1;
     margin-top: 10px;
@@ -126,7 +126,7 @@
 
 .price {
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     margin-top: 10px;
     margin-left: 97px;
@@ -135,23 +135,24 @@
 
 .marked {
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 12px;
     color: #9D9D9D;
     margin-left: 80px;
-    margin-top: -18px;
+    margin-top: -20px;
 }
 
 .remove {
     font-family: Roboto;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: bold;
     margin-top: 20px;
-    padding: 28px;
+    margin-left: 5px;
 }
 
 .card2 {
     margin-top: 10px;
     width: 750px;
-    height: 430px;
+    height: 465px;
     background: hsl(0, 0%, 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #DCDCDC;
     border-radius: 1px;
@@ -176,8 +177,7 @@
     font-size: 16px;
     text-align: left;
     letter-spacing: 0px;
-    text-transform: capitalize;
-    font-weight: bold;
+    text-transform: capitalize;    
     padding: 1px;
     opacity: 1;
 }
@@ -207,12 +207,11 @@
 .type {
     margin-top: 23px;
     font-family: Roboto;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;    
 }
 
 .radio1 {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .homes {
@@ -223,7 +222,7 @@
 
 .radio2 {
     margin-top: -20px;
-    margin-left: 195px;
+    margin-left: 140px;
 }
 
 .work {
@@ -233,8 +232,8 @@
 }
 
 .radio3 {
-    margin-top: -22px;
-    margin-left: 390px;
+    margin-top: -20px;
+    margin-left: 250px;
 }
 
 .other {
@@ -251,9 +250,23 @@
     margin-bottom: 10px;
     font-size: 14px;
     width: 151px;
-    margin-top: 36px;
+    margin-top: -55px;
     height: 35px;
     background-color: #3371B5;
     border-color: #3371B5;
+    color: white;
+}
+
+.btncust {
+    margin-left: 550px;
+    display: flexbox;
+    //border-radius: 2px;
+    opacity: 1;    
+    font-size: 14px;
+    width: 151px;
+    margin-top: -400px;
+    height: 35px;
+    background-color:#A03037;
+    border-color:#A03037;
     color: white;
 }
