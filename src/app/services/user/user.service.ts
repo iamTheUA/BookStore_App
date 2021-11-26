@@ -58,4 +58,6 @@ export class UserService {
   userAddress(addressInfo: addressModel, inputuserId: number) {
     return this.http.post<any>(this.baseUrl + '/address/' + inputuserId, addressInfo)
   }
+
+
 }

@@ -4,14 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ForgetPasswordComponent } from './components/user/forget-password-component/forget-password.component';
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon'
-import { MatExpansionModule } from '@angular/material/expansion'
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatError, MatFormFieldModule } from '@angular/material/form-field';
 import { HeaderComponent } from './components/user/header/header.component';
 import { HeaderSearchComponent } from './components/user/header-search/header-search.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './components/user/login-component/login.component';
 import { SigninComponent } from './components/user/signin/signin.component';
 import { ResetPasswordComponent } from './components/user/reset-password/reset-password.component';
@@ -64,10 +66,10 @@ import { CustomerOrderSummaryComponent } from './components/book/customer-order-
     MatCardModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatCardModule,
     MatExpansionModule,
     MatRadioModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatMenuModule
   ],
   providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]
