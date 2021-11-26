@@ -16,6 +16,8 @@ import { WishlistComponent } from './components/book/wishlist/wishlist.component
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 import { CartComponent } from './components/book/cart/cart.component';
 
+
+
 const routes: Routes = [
   {path:"login", component:LoginComponent},
   {path:"signup", component:SigninComponent},
