@@ -20,10 +20,11 @@ export class BooklistComponent implements OnInit {
 
   getAllBooks() {
     this.bookService.getAllBooks().subscribe(
-      data => { this.Books = data.data }
-    )
-
-  }
+      data => { this.Books = data.data 
+      console.log(this.Books)
+    })
+    }
+  
 
   onClick(n: number) {
     this.routerlink.navigate(["/book-details/" + n])

@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
     this.userService.generateToken(this.credential).subscribe((response: any) => {
       console.log(response.token)
       this.userService.loginUser(response.token)
+      localStorage.setItem("token", response.token)
       this.routerlink.navigate(["/booklist"])
     },
       error => { console.log(error); this.wrongCredential = true })

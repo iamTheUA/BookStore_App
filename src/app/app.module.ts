@@ -61,7 +61,13 @@ import { CartComponent } from './components/book/cart/cart.component';
     MatExpansionModule,
     MatRadioModule
   ],
-  providers: [UserService, AuthGuard],
+  providers: [UserService, AuthGuard, 
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthIntercaptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -52,7 +52,7 @@ export class UserService {
   }
 
   passwordReset(inputToken: string, inputNewPassword: string) {
-    return this.http.post<any>(this.baseUrl + '/reset-password', { "token": inputToken, "newPassword": inputNewPassword })
+    return this.http.put<any>(this.baseUrl + '/reset-password', { "token": inputToken, "newPassword": inputNewPassword })
   }
 
   userAddress(addressInfo: addressModel, inputuserId: number) {

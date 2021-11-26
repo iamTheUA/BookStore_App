@@ -13,11 +13,11 @@
         <mat-card class="main_card" *ngFor="let book of Books">
             <div (click)="onClick(book.id)">
                 <div class=" book_image">
-                    <img src="../../../../assets/images/Image 10@2x.png" alt="book" class="book_img">
+                    <img src="{{book.img}}" alt="book" class="book_img">
                 </div>
 
                 <div class="book_name">
-                    {{book.name}}
+                    {{book.name}} 
                 </div>
                 <div class="author_name">
                     {{book.author}}
