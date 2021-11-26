@@ -13,13 +13,8 @@
         </div>
         <div class="main-img-container">
             <div class="main-img-box">
-<<<<<<< HEAD
-
-                <img class="main-img" src="../../../../assets/images/Image 20@2x.png" alt="">
-=======
                 
                 <img class="main-img" src="{{book.img}}" alt="">
->>>>>>> initial
             </div>
             <div class="bag-wishlist-row">
                 <button [matMenuTriggerFor]="beforeMenu" class="add-to-bag-button">
@@ -42,22 +37,12 @@
                 <div class="author">by {{book.author}}</div>
                 <div class="rating-container">
                     <div class="rating-box">
-<<<<<<< HEAD
-                        4.5
-                        <mat-icon class="star">star</mat-icon>
-                    </div>
-                    <div class="rating-count">(20)</div>
-                </div>
-                <div class="price">Rs 1500 <div class="marked"><s>2000</s></div>
-                </div>
-=======
                         {{book.rating}}
                         <mat-icon class="star" >star</mat-icon>
                     </div>
                     <div class="rating-count">(20)</div>
                 </div>
                 <div class="price">Rs {{book.price}} <div class="marked"><s>{{book.markedPrice}}</s></div></div>
->>>>>>> initial
             </div>
             <div class="description-box">
                 <ul class="para">
@@ -67,17 +52,8 @@
                         </div>
                     </li>
                     <div class="para">
-<<<<<<< HEAD
-
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-=======
                         {{book.description}}
                         
->>>>>>> initial
                     </div>
                 </ul>
             </div>
