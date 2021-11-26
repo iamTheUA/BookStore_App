@@ -1,0 +1,64 @@
+<app-header-search></app-header-search>
+<div class="head">
+    <span (click)="onClick()" [routerLink]="['']" class="home">Home / </span>
+    <span (click)="onClick()" [routerLink]="['']" class="profile">Profile</span>
+</div>
+<div class="main-container">
+    <span class="h1">Personal details</span>
+    <span *ngIf="hidden" (click)="toggle()" class="edit">Edit</span>
+    <span *ngIf="display" (click)="toggle()" class="edit">Cancel</span>
+    <button *ngIf="display" class="save">Save</button>
+
+    <div class="input-row">
+        <label class="label">Full Name</label>
+        <input class="input" type="text" placeholder=" Enter full name">
+    </div>
+    <div class="input-row">
+        <label class="label">Email Id</label>
+        <input class="input" type="email" placeholder="Enter Email address">
+    </div>
+    <div class="input-row">
+        <label class="label">Password</label>
+        <input class="input" type="password" placeholder=" Enter password">
+    </div>
+    <div class="input-row">
+        <label class="label">Mobile Number</label>
+        <input class="input" type="tel" placeholder=" Enter Mobile No">
+    </div>
+    <div class="h1">
+        <h3>Address Details
+            <button mat-button class="new" (click)="onClickClear()" [routerLink]="['']">
+                Add New User
+            </button>
+        </h3>
+    </div>
+    <span class="h1">1.WORK</span>
+    <span *ngIf="hidden" (click)="toggle1()" class="edit">Edit</span>
+    <span *ngIf="display1" (click)="toggle1()" class="edit">Cancel</span>
+    <button *ngIf="display1" class="save2">Save</button>
+    <div class="input-row">
+        <label class="label">Address</label>
+        <input class="input2" type="tel" placeholder=" Enter your Address">
+    </div>
+    <div class="input-row">
+        <label class="label">City/town</label>
+        <input class="input3" type="tel" placeholder=" Enter your City ">
+    </div>
+    <div class="type"><span>Type</span></div>
+    <div class="input-row2">
+        <label class="label">State</label>
+        <input class="input3" type="tel" placeholder=" Enter your State">
+    </div>
+    <div class="radio1">
+        <input type="radio" id="home" name="type" value="home">
+        <label class="homs" for="home">Home</label><br>
+    </div>
+    <div class="radio2">
+        <input type="radio" id="work" name="type" value="work">
+        <label class="work" for="work">Work</label><br>
+    </div>
+    <div class="radio3">
+        <input type="radio" id="other" name="type" value="other">
+        <label class="other" for="other">Other</label>
+    </div>
+</div>
