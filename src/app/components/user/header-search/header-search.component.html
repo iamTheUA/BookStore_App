@@ -9,7 +9,6 @@
         </form>
         <div *ngIf="fullDisplay" class="person" [matMenuTriggerFor]="menu">
             <mat-icon>person</mat-icon>
-            <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
             <mat-menu #menu="matMenu">
                 <button mat-menu-item routerLink="/personal-details">
                     <mat-icon>person</mat-icon> Profile
@@ -27,6 +26,8 @@
                 </button>
             </mat-menu>
             <span class="label">Person</span>
+
+
         </div>
         <div *ngIf="fullDisplay" class="cart">
             <mat-icon>shopping_cart</mat-icon>
