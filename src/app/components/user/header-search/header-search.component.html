@@ -11,8 +11,20 @@
             <mat-icon>person</mat-icon>
             <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
             <mat-menu #menu="matMenu">
-                <button mat-menu-item>Item 1</button>
-                <button mat-menu-item>Item 2</button>
+                <button mat-menu-item routerLink="/personal-details">
+                    <mat-icon>person</mat-icon> Profile
+                </button>
+                <button mat-menu-item routerLink="/myorders">
+                    <mat-icon> local_grocery_store</mat-icon>My Order
+                </button>
+                <button mat-menu-item routerLink="/wishlist">
+                    <mat-icon>favorite</mat-icon>My Wishlist
+                </button>
+                <button mat-menu-item>
+                    <div class="logout">
+                        <mat-icon>cancel</mat-icon>Logout
+                    </div>
+                </button>
             </mat-menu>
             <span class="label">Person</span>
         </div>
