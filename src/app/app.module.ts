@@ -27,6 +27,9 @@ import { OrderGreetingComponent } from './components/book/order-greeting/order-g
 import { WishlistComponent } from './components/book/wishlist/wishlist.component';
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 import { CartComponent } from './components/book/cart/cart.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 
 @NgModule({
@@ -59,7 +62,8 @@ import { CartComponent } from './components/book/cart/cart.component';
     MatFormFieldModule,
     MatCardModule,
     MatExpansionModule,
-    MatRadioModule
+    MatRadioModule,
+    BrowserAnimationsModule
   ],
   providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]
