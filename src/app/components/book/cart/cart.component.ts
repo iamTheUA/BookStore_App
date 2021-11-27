@@ -15,22 +15,13 @@ export class CartComponent implements OnInit {
 
   public totalPrice:number=0;
   public markedPrice:number=0;
-
+  
+  public addressAllowed=false;
 
 
   constructor(public bookService:BookService, public router:Router) { 
-  //  this.ngOnInit(); 
   }
-  // ngOnChanges(): void {
-  //   this.totalPrice=0;
-  //   this.markedPrice=0;
-  //   this.bookService.getCartlist().subscribe((n:any)=>this.cartlist=n.data);
-  //   for(let book of this.cartlist){
-  //     this.totalPrice = this.totalPrice + (book.quantity*book.book.price);
-  //     this.markedPrice = this.markedPrice + (book.quantity*book.book.markedPrice);
-  //     console.log("chan")
-  //   }
-  // }
+
 
   ngOnInit(): void {
     this.bookService.getCartlist().subscribe((n:any)=>{this.cartlist=n.data
@@ -71,5 +62,9 @@ export class CartComponent implements OnInit {
   placeOrder(){
     this.bookService.placeOrder().subscribe(n=>console.log("orderPlaced!"));
     this.router.navigate(["/greeting"]);
+  }
+
+  changeAddressAllowed(){
+    this.addressAllowed=true;
   }
 }
