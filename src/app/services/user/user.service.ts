@@ -65,12 +65,19 @@ export class UserService {
     return this.http.post<any>(this.baseUrl + '/reset-password', { "token": inputToken, "newPassword": inputNewPassword })
   }
 
-  userAddress(addressInfo: addressModel, inputuserId: number) {
-    return this.http.post<any>(this.baseUrl + '/address/' + inputuserId, addressInfo)
+  userAddress(addressInfo: addressModel,) {
+    let userId = localStorage.getItem("userId");
+    return this.http.post<any>(this.baseUrl + '/address/' + userId, addressInfo)
   }
 
   userOrder(userid: string) {
     return this.http.get<any>(this.baseUrl + '/order/listoforders/' + userid)
   }
+
+  getuserAddress(type: number) {
+    let userId = localStorage.getItem("userId");
+    return this.http.get<any>(this.baseUrl + '/address/' + userId + '/' + type)
+  }
+
 
 }

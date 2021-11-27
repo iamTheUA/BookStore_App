@@ -30,6 +30,7 @@ import { WishlistComponent } from './components/book/wishlist/wishlist.component
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 import { CartComponent } from './components/book/cart/cart.component';
 import { MyordersComponent } from './components/user/myorders/myorders.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { MyordersComponent } from './components/user/myorders/myorders.component
     MatMenuModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSnackBarModule
   ],
   providers: [UserService, AuthGuard,
     {
