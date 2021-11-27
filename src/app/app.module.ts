@@ -29,6 +29,7 @@ import { OrderGreetingComponent } from './components/book/order-greeting/order-g
 import { WishlistComponent } from './components/book/wishlist/wishlist.component';
 import { PersonalDetailsComponent } from './components/user/personal-details/personal-details.component';
 import { CartComponent } from './components/book/cart/cart.component';
+import { MyordersComponent } from './components/user/myorders/myorders.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { CartComponent } from './components/book/cart/cart.component';
     WishlistComponent,
     PersonalDetailsComponent,
     CartComponent,
+    MyordersComponent
 
   ],
 

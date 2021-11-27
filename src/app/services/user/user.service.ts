@@ -59,5 +59,8 @@ export class UserService {
     return this.http.post<any>(this.baseUrl + '/address/' + inputuserId, addressInfo)
   }
 
+  userOrder(userid: string) {
+    return this.http.get<any>(this.baseUrl + '/order/listoforders/' + userid)
+  }
 
 }

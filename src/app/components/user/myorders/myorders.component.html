@@ -1,17 +1,23 @@
-<!-- <app-header-search></app-header-search> -->
+<app-header-search></app-header-search>
 
 <div class="body">
+    <div class="containerforlink">
+        <span routerLink="/booklist">Home/</span>
+        <span routerLink="/myorders"> My Orders</span>
+
+    </div>
     <div class="container">
-        <div class="cart-book">
+
+        <div class="cart-book" *ngFor="let book of Books">
             <div>
                 <img class="img" src="../../../../assets/images/Image 11.png">
             </div>
             <div class="book-info">
-                <div class="book-name"> Don't Make Me Think</div>
-                <div class="author">by: Steve Krug</div>
+                <div class="book-name"> {{book.name}}</div>
+                <div class="author">by: {{book.author}}</div>
                 <div class="price">
-                    <div class="book-price">Rs.1500</div>
-                    <div class="discount-price">Rs.2000</div>
+                    <div class="book-price">Rs.{{book.totalPrice}}</div>
+                    <div class="discount-price">Rs.{{book.totalPrice}}</div>
                 </div>
             </div>
             <div class="order-placed">
@@ -22,4 +28,4 @@
 
 
 
-<!-- <app-footer></app-footer> -->
+<app-footer></app-footer>
