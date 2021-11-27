@@ -9,7 +9,7 @@ import { MatExpansionPanel } from '@angular/material/expansion';
   styleUrls: ['./cart.component.scss'],
   viewProviders: [MatExpansionPanel]
 })
-export class CartComponent implements OnInit, OnChanges {
+export class CartComponent implements OnInit {
 
   public cartlist: any[] = []
 
@@ -19,41 +19,51 @@ export class CartComponent implements OnInit, OnChanges {
 
 
   constructor(public bookService:BookService, public router:Router) { 
-    this.ngOnInit();
+  //  this.ngOnInit(); 
   }
-  ngOnChanges(): void {
-    this.totalPrice=0;
-    this.markedPrice=0;
-    this.bookService.getCartlist().subscribe((n:any)=>this.cartlist=n.data);
-    for(let book of this.cartlist){
-      this.totalPrice = this.totalPrice + (book.quantity*book.book.price);
-      this.markedPrice = this.markedPrice + (book.quantity*book.book.markedPrice);
-      console.log("chan")
-    }
-  }
+  // ngOnChanges(): void {
+  //   this.totalPrice=0;
+  //   this.markedPrice=0;
+  //   this.bookService.getCartlist().subscribe((n:any)=>this.cartlist=n.data);
+  //   for(let book of this.cartlist){
+  //     this.totalPrice = this.totalPrice + (book.quantity*book.book.price);
+  //     this.markedPrice = this.markedPrice + (book.quantity*book.book.markedPrice);
+  //     console.log("chan")
+  //   }
+  // }
 
   ngOnInit(): void {
-    this.bookService.getCartlist().subscribe((n:any)=>this.cartlist=n.data);
+    this.bookService.getCartlist().subscribe((n:any)=>{this.cartlist=n.data
     for(let book of this.cartlist){
       this.totalPrice = this.totalPrice + (book.quantity*book.book.price);
       this.markedPrice = this.markedPrice + (book.quantity*book.book.markedPrice);
-      console.log("onit")
-    }
+      console.log("onit");
+      console.log(this.markedPrice);
+    }});
   }
 
+  reload(){
+    this.bookService.getCartlist().subscribe((n:any)=>{this.cartlist=n.data
+      for(let book of this.cartlist){
+        this.totalPrice = this.totalPrice + (book.quantity*book.book.price);
+        this.markedPrice = this.markedPrice + (book.quantity*book.book.markedPrice);
+        console.log("onit");
+        console.log(this.markedPrice);
+      }});
+  }
 
   remove(bookId:number) {
-    this.bookService.removeFromCart(bookId, 0).subscribe(n=>this.ngOnChanges());
+    this.bookService.removeFromCart(bookId, 0).subscribe(n=>this.reload());
    
   }
 
   removeOneBook(bookId:number, bookQunatity:number){
-    this.bookService.removeFromCart(bookId, (bookQunatity-1)).subscribe(n=>{this.ngOnChanges(); console.log(bookQunatity-1)});
+    this.bookService.removeFromCart(bookId, (bookQunatity-1)).subscribe(n=>{this.reload(); console.log(bookQunatity-1)});
 
   }
 
   addOneBook(bookId:number, bookQunatity:number){
-    this.bookService.addToCart(bookId, bookQunatity+1).subscribe(n=>{this.ngOnChanges(); console.log(bookQunatity+1)});
+    this.bookService.addToCart(bookId, bookQunatity+1).subscribe(n=>{this.reload(); console.log(bookQunatity+1)});
     
   }
 
