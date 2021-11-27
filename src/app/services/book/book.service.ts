@@ -19,4 +19,24 @@ export class BookService {
   getBookById(n:number){
     return this.http.get<any>(this.baseUrl+"/book/"+n)
   }
+
+  getCartlist(){
+    let userId=localStorage.getItem("userId");
+    return this.http.get<any>(this.baseUrl+"/cart/"+userId)
+  }
+
+  addToCart(bookId:number, quantity:number){
+    let userId=localStorage.getItem("userId");
+    return this.http.get<any>(this.baseUrl+"/cart/"+`${userId}/${bookId}/${quantity}`)    
+  }
+
+  removeFromCart(bookId:number, quantity:number){
+    let userId=localStorage.getItem("userId");
+    return this.http.delete<any>(this.baseUrl+"/cart/"+`${userId}/${bookId}/${quantity}`)    
+  }
+
+  placeOrder(){
+    let userId=localStorage.getItem("userId");
+    return this.http.get<any>(this.baseUrl+"/order/placeorder/"+userId)
+  }
 }

@@ -2,34 +2,36 @@
 
 <div class="main-container">
     <div>
-        <span (click)="onClick()" [routerLink]="['']" class="home">Home/</span>
-        <span (click)="onClick()" [routerLink]="['']" class="cart">My Cart</span>
+        <span routerLink="/booklist" class="home">Home/</span>
+        <span class="cart">My Cart({{cartlist.length}})</span>
     </div>
-    <mat-card class="card1">
+    <!-- <span class="title">My Cart({{cartlist.length}})</span> -->
+    <mat-card *ngFor="let bookObj of cartlist" class="card1">
         <div>
-            <span class="title">My Cart(1)</span>
-            <div>
+            <div >
                 <div class="book1">
-                    <img class="bookimg" src="assets/images/Image 11@2x.png" />
+                    <img class="bookimg" src="{{bookObj.book.img}}" />
                     <div>
                         <div class="bookdetails">
 
                             <div class="booktitle">
-                                Don't Make Me Think
+                                {{bookObj.book.name}}
                             </div>
                             <div class="sub">
-                                by Steve krug
+                                by {{bookObj.book.author}}
                             </div>
                             <div class="price">
-                                Rs. 1500
-                                <div class="marked"><s>Rs.2000</s></div>
+                                Rs. {{bookObj.book.price}}
+                                <div class="marked"><s>Rs.{{bookObj.book.markedPrice}}</s></div>
                             </div>
 
                             <div class="buttons">
-                                <button class="circle" (click)="null">-</button>
-                                <button class="square" (click)="null">1</button>
-                                <button class="circle" (click)="null">+</button>
-                                <span class="remove" (click)="remove()">Remove</span>
+                                <button class="circle" (click)="removeOneBook(bookObj.book.id, bookObj.quantity)">-</button>
+                                <span class="square" >{{bookObj.quantity}}</span>
+                                <button class="circle" (click)="addOneBook(bookObj.book.id, bookObj.quantity)">+</button>
+                                <span class="remove" (click)="remove(bookObj.book.id)">Remove</span>
+
+                                <!-- <button class="place-order" > Place Order</button> -->
                             </div>
                         </div>
                     </div>
@@ -66,18 +68,20 @@
                         <input class="input3" type="tel" placeholder=" Enter your State">
                     </div>
                     <div class="type"><span>Type</span></div>
+                    <div class="radio">
                     <div class="radio1">
                         <input type="radio" id="home" name="type" value="home">
                         <label class="homes" for="home">Home</label><br>
                     </div>
                     <div class="radio2">
                         <input type="radio" id="work" name="type" value="work">
-                        <label class="work" for="work">Work</label><br>
+                        <label class="homes" for="work">Work</label><br>
                     </div>
-                    <div class="radio3">
+                    <div class="radio2">
                         <input type="radio" id="other" name="type" value="other">
-                        <label class="other" for="other">Other</label>
+                        <label class="homes" for="other">Other</label>
                     </div>
+                </div>
                 </div>
             </mat-card>
         </mat-expansion-panel>
@@ -93,22 +97,22 @@
                 </div>
                 <div>
                     <div class="book1">
-                        <img class="bookimg" src="assets/images/Image 11@2x.png" />
+                        <img class="bookimg" src="{{cartlist[0].book.img}}" />
                         <div>
                             <div class="bookdetails">
 
                                 <div class="booktitle">
-                                    Don't Make Me Think
+                                    {{cartlist[0].book.name}} <div *ngIf="cartlist.length>1">+{{cartlist.length-1}} </div>
                                 </div>
                                 <div class="sub">
-                                    by Steve krug
-                                </div>
+                                   
+                                </div> 
                                 <div class="price">
-                                    Rs. 1500
-                                    <div class="marked"><s>Rs.2000</s></div>
+                                    Rs. {{totalPrice}}
+                                    <div class="marked"><s>Rs. {{markedPrice}}</s></div>
                                 </div>
                             </div>
-                            <button class="button2" routerLink="/greeting">CHECKOUT</button>
+                            <button class="button2" (click)="placeOrder()">CHECKOUT</button>
                         </div>
                     </div>
                     <div>

@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: "greeting", component: OrderGreetingComponent },
   { path: "wishlist", component: WishlistComponent },
   { path: "login-request", component: LoginRequestComponent },
-  { path: "cart", component: CartComponent },
+  { path: "mycart", component: CartComponent },
   { path: "place-order-request", component: PlaceOrderRequestComponent },
   { path: "customer-order-summary", component: CustomerOrderSummaryComponent }
 
