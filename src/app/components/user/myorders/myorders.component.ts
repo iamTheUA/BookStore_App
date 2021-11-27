@@ -8,7 +8,7 @@ import { UserService } from 'src/app/services/user/user.service';
 })
 export class MyordersComponent implements OnInit {
 
-  public Books: any[] = [];
+  public Orders: any[] = [];
 
   userId = localStorage.getItem('userId');
   constructor(private userService: UserService) { }
@@ -19,8 +19,9 @@ export class MyordersComponent implements OnInit {
   getAllOrderDetails() {
     if (this.userId != null) {
       this.userService.userOrder(this.userId).subscribe(
-
+        data => { this.Orders = data.data; console.log(this.Orders) }
       )
+
       console.log(this.userId);
 
     }

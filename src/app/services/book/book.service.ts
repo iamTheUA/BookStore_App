@@ -16,27 +16,33 @@ export class BookService {
     return this.http.get<any>(this.baseUrl + "/book/")
   }
 
-  getBookById(n:number){
-    return this.http.get<any>(this.baseUrl+"/book/"+n)
+  getBookById(n: number) {
+    return this.http.get<any>(this.baseUrl + "/book/" + n)
   }
 
-  getCartlist(){
-    let userId=localStorage.getItem("userId");
-    return this.http.get<any>(this.baseUrl+"/cart/"+userId)
+  getCartlist() {
+    let userId = localStorage.getItem("userId");
+    return this.http.get<any>(this.baseUrl + "/cart/" + userId)
   }
 
-  addToCart(bookId:number, quantity:number){
-    let userId=localStorage.getItem("userId");
-    return this.http.get<any>(this.baseUrl+"/cart/"+`${userId}/${bookId}/${quantity}`)    
+  addToCart(bookId: number, quantity: number) {
+    let userId = localStorage.getItem("userId");
+    return this.http.get<any>(this.baseUrl + "/cart/" + `${userId}/${bookId}/${quantity}`)
   }
 
-  removeFromCart(bookId:number, quantity:number){
-    let userId=localStorage.getItem("userId");
-    return this.http.delete<any>(this.baseUrl+"/cart/"+`${userId}/${bookId}/${quantity}`)    
+  removeFromCart(bookId: number, quantity: number) {
+    let userId = localStorage.getItem("userId");
+    return this.http.delete<any>(this.baseUrl + "/cart/" + `${userId}/${bookId}/${quantity}`)
   }
 
-  placeOrder(){
-    let userId=localStorage.getItem("userId");
-    return this.http.get<any>(this.baseUrl+"/order/placeorder/"+userId)
+  placeOrder() {
+    let userId = localStorage.getItem("userId");
+    return this.http.get<any>(this.baseUrl + "/order/placeorder/" + userId)
+  }
+
+  addToWishList(bookId: number) {
+    let userId = localStorage.getItem("userId");
+    return this.http.get<any>(this.baseUrl + "/wishlist" + `${userId}/${bookId}`)
+
   }
 }

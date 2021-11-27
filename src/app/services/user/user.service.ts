@@ -21,9 +21,10 @@ export class UserService {
 
   loginUser(token: any) {
     localStorage.setItem("token", token)
-    this.getUserByToken(token).subscribe((n:any)=>{ 
+    this.getUserByToken(token).subscribe((n: any) => {
       localStorage.setItem("userId", n.data.id.toString());
-      localStorage.setItem("userName",n.data.fullName); })    
+      localStorage.setItem("userName", n.data.fullName);
+    })
     return true
   }
 
@@ -47,8 +48,8 @@ export class UserService {
     return localStorage.getItem("token")
   }
 
-  getUserByToken(token:String){
-    return this.http.get<any>(this.baseUrl+"/id/"+token)
+  getUserByToken(token: String) {
+    return this.http.get<any>(this.baseUrl + "/id/" + token)
   }
 
   signinUser(userInFo: singInModel) {

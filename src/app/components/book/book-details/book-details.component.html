@@ -18,10 +18,10 @@
                 <img class="main-img" src="{{book.img}}" alt="">
             </div>
             <div class="bag-wishlist-row">
-                <button class="add-to-bag-button">
+                <button class="add-to-bag-button" (click)="onClickAddToBag()">
                     ADD TO BAG
                 </button>
-                <button class="add-to-wishlist">
+                <button class="add-to-wishlist" (click)="onClickAddToWishList()">
                     <mat-icon class="favorite">favorite</mat-icon>
                     WISHLIST
                 </button>

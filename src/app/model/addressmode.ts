@@ -1,6 +1,6 @@
 export interface addressModel {
 
-    name: string;
+    name: string,
     pincode: string,
     locality: string,
     address: string,
