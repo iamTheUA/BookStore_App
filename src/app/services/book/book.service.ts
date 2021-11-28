@@ -55,4 +55,8 @@ export class BookService {
     let userId = localStorage.getItem("userId");
     return this.http.delete<any>(this.baseUrl + "/wishlist/" + `${userId}/${bookId}`)
   }
+
+  searchBook(bookName: String){
+    return this.http.get<any>(this.baseUrl+"/book/search/"+bookName)
+  }
 }

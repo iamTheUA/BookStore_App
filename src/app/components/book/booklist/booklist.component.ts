@@ -11,6 +11,8 @@ export class BooklistComponent implements OnInit {
 
   public Books: any[] = []
 
+  public seachedBook='';
+
   constructor(private bookService: BookService, private routerlink: Router) { }
 
   ngOnInit(): void {
@@ -30,6 +32,11 @@ export class BooklistComponent implements OnInit {
 
   }
 
+  receiveBookName($event:any){
+    this.seachedBook=$event;
+    console.log(this.seachedBook)
+    this.bookService.searchBook(this.seachedBook).subscribe(n=>{this.Books=n.data})
+  }
 
 
 
