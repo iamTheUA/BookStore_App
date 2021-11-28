@@ -1,3 +1,4 @@
+import { UserService } from 'src/app/services/user/user.service';
 import { Router } from '@angular/router';
 import { BookService } from 'src/app/services/book/book.service';
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
@@ -15,22 +16,30 @@ export class CartComponent implements OnInit {
 
   public totalPrice:number=0;
   public markedPrice:number=0;
-  
+
   public addressAllowed=false;
+  public type=[true, false, false];
 
+  addressModel = {
+    name: '',
+    pincode: '',
+    locality: '',
+    address: '',
+    city: '',
+    landmark: '',
+    type: 1
+  }
 
-  constructor(public bookService:BookService, public router:Router) { 
+  customerSection=false;
+  summarySection=false;
+
+  constructor(public bookService:BookService, public router:Router, public userService:UserService) { 
   }
 
 
   ngOnInit(): void {
-    this.bookService.getCartlist().subscribe((n:any)=>{this.cartlist=n.data
-    for(let book of this.cartlist){
-      this.totalPrice = this.totalPrice + (book.quantity*book.book.price);
-      this.markedPrice = this.markedPrice + (book.quantity*book.book.markedPrice);
-      console.log("onit");
-      console.log(this.markedPrice);
-    }});
+    this.reload();
+    this.userService.getuserAddress(1).subscribe(n=> {console.log(n); this.addressModel=n.data});
   }
 
   reload(){
@@ -60,11 +69,46 @@ export class CartComponent implements OnInit {
 
 
   placeOrder(){
+    let count=1;
+    for(let type of this.type){
+
+      if(type){
+        this.addressModel.type=count;
+        break;
+      }
+      count++;
+    }
     this.bookService.placeOrder().subscribe(n=>console.log("orderPlaced!"));
     this.router.navigate(["/greeting"]);
   }
 
   changeAddressAllowed(){
     this.addressAllowed=true;
+  }
+
+  typeCall(type:number){
+    this.userService.getuserAddress(type).subscribe(n=> {console.log(n);
+      if(n.data){
+      this.addressModel=n.data
+    }else{
+      this.addressModel = {
+        name: '',
+        pincode: '',
+        locality: '',
+        address: '',
+        city: '',
+        landmark: '',
+        type: type
+      }
+    }
+  });
+    this.type[0]=false;
+    this.type[type-1]=true;
+    return true;
+  }
+
+  addressTypeSave(){
+    this.userService.userAddress(this.addressModel).subscribe(n=>{console.log("addressSaved"); this.summarySection=true});
+
   }
 }

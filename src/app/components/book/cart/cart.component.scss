@@ -154,7 +154,7 @@
 .card2 {
     margin-top: 10px;
     width: 750px;
-    height: 430px;
+    height: 450px;
     background: hsl(0, 0%, 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #DCDCDC;
     border-radius: 1px;
@@ -247,19 +247,28 @@
 }
 
 .button2 {
-    margin-left: 518px;
+    border: none;
+    margin-left: 550px;
     display: flexbox;
     border-radius: 2px;
     opacity: 1;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 10px;
     width: 151px;
     margin-top: -5px;
     height: 35px;
     background-color: #3371B5;
     border-color: #3371B5;
     color: white;
+    color: #ffffff;
+    background-color: #3371B5;
+    border: none;
+    height: 30px;
+    width: 111px;
+    border-radius: 2px;
+    font-family: Roboto;
 }
+
 
 .forcard{
     margin-top: 10px;
@@ -269,7 +278,7 @@
     border-radius: 1px;
     font-family: Roboto;
     font-weight: 400;
-
+    
 }
 
 .place-order{
@@ -288,4 +297,24 @@ button{
 
 .radio{
     display: flex;
+}
+
+.continue{
+    margin-left: 550px;
+    
+    color: #ffffff;
+    background-color: #3371B5;
+    border: none;
+    height: 30px;
+    width: 111px;
+    border-radius: 2px;
+}
+.checkout{
+    margin-left: 535px;
+    color: #ffffff;
+    background-color: #3371B5;
+    border: none;
+    height: 30px;
+    width: 111px;
+    border-radius: 2px;
 }

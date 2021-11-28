@@ -1,3 +1,4 @@
+import { BookService } from 'src/app/services/book/book.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishlistComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public bookService:BookService) { }
+  wishlist:any[]=[];
   
   ngOnInit(): void {
+   this.reload();
   }
 
+  reload(){
+    this.bookService.getWishList().subscribe(n=>{console.log(n.data); this.wishlist=n.data})
+  }
+
+  delete(bookId:number){
+    this.bookService.removeFromWishList(bookId).subscribe(n=>this.reload());
+
+  }
 }
