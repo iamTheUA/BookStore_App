@@ -81,7 +81,7 @@ export class PersonalDetailsComponent implements OnInit {
             address: '',
             city: '',
             landmark: '',
-            type: 0
+            type: 1
           }
         }
 
