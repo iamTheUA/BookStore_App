@@ -25,7 +25,8 @@
                 <input class="input" required #fullName="ngModel"
                     [class.is-invalid]="fullName.invalid && fullName.touched" type="text" name=fullName ngModel required
                     pattern="[A-Z][a-z]{4,}">
-                <small [hidden]="fullName.valid || fullName.untouched">length should be more the 4 letters and start
+                <small class="forValidation" [hidden]="fullName.valid || fullName.untouched"> length should be more the
+                    4 letters and start
                     with capitial letter
                 </small>
             </div>
@@ -37,7 +38,8 @@
                 <label class="label">Password</label>
                 <input class="input" #password="ngModel" [class.is-invalid]="password.invalid && password.touched"
                     type="password" name="password" ngModel required pattern="[a-z]{4,}">
-                <small [hidden]="password.valid || password.untouched">length should be more the 4 letters
+                <small class="forValidation" [hidden]="password.valid || password.untouched">length should be more the 4
+                    letters
                 </small>
             </div>
             <div class="input-row">
@@ -45,7 +47,8 @@
                 <input class="input" required #phoneNumber="ngModel"
                     [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched" type="number" name="phoneNumber"
                     ngModel required placeholder="Phone number" pattern="[0-9]{10}$">
-                <small [hidden]="phoneNumber.valid || phoneNumber.untouched">Phone num should be 10 digit
+                <small class="forValidation" [hidden]="phoneNumber.valid || phoneNumber.untouched">Phone num should be
+                    10 digit
                 </small>
             </div>
 

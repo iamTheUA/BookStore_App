@@ -1,8 +1,9 @@
 <app-header-search [fullDisplay]="true"></app-header-search>
-<div class="head">
+<div class="containerforlink">
     <span routerLink="/booklist">Home / </span>
     <span>Profile</span>
 </div>
+
 <div class="main-container">
     <span class="label">Personal details</span>
     <span *ngIf="hidden" (click)="toggle()" class="edit">Edit</span>
