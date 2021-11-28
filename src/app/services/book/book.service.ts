@@ -42,7 +42,8 @@ export class BookService {
 
   addToWishList(bookId: number) {
     let userId = localStorage.getItem("userId");
-    return this.http.get<any>(this.baseUrl + "/wishlist" + `${userId}/${bookId}`)
+    console.log(this.baseUrl + "/wishlist/" + `${userId}/${bookId}`);
+    return this.http.get<any>(this.baseUrl + "/wishlist/" + `${userId}/${bookId}`)
   }
 
   getWishList(){

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { BookService } from 'src/app/services/book/book.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishlistComponent implements OnInit {
 
-  constructor(public bookService:BookService) { }
+  constructor(public bookService:BookService, public router: Router) { }
   wishlist:any[]=[];
   
   ngOnInit(): void {
@@ -22,5 +23,9 @@ export class WishlistComponent implements OnInit {
   delete(bookId:number){
     this.bookService.removeFromWishList(bookId).subscribe(n=>this.reload());
 
+  }
+
+  gotoBook(n:number){
+    this.router.navigate(["/book-details/"+n])
   }
 }
