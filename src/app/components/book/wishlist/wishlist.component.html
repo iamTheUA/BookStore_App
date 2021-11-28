@@ -1,17 +1,17 @@
-<app-header-search></app-header-search>
+<app-header-search [fullDisplay]="true"></app-header-search>
 <div>
     <div class="main-container">
         <div>
-            <span class="h1">Home /</span>
+            <span routerLink="/booklist" class="h1">Home /</span>
             <span class="h2"> My Wishlist</span>
         </div>
             <div class="card">
                 <!-- <mat-card class="card-main"> -->
                     <mat-card class="card2">
-                        <h3 class="head">My Wishlist (2)</h3>
+                        <h3 class="head">My Wishlist ({{wishlist.length}})</h3>
                     </mat-card>
                     <div class="container" *ngFor="let book of wishlist">
-                        <div class="cart-book">
+                        <div (click)=gotoBook(book.id) class="cart-book">
                             <div>
                                 <img class="img" src="../../../../assets/images/Image 11.png">
                             </div>

@@ -1,6 +1,6 @@
 import { UserService } from './../../../services/user/user.service';
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header-search',
@@ -9,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderSearchComponent implements OnInit {
 
+  bookName='';
 
-  fullDisplay:boolean=true;
+  @Input() fullDisplay:boolean;
 
+  @Output() searchEvent= new EventEmitter<String>(); 
   
-  constructor(public router:Router, public userService:UserService) { }
+  constructor(public router:Router, public userService:UserService) {
+    this.fullDisplay=true;
+   }
 
   ngOnInit(): void {
   }
@@ -21,6 +25,11 @@ export class HeaderSearchComponent implements OnInit {
   onLogout(){
     this.userService.logout()
     this.router.navigate(["/login"]);
+  }
+
+  isSerarch(){
+    console.log(this.bookName)
+    this.searchEvent.emit(this.bookName);
   }
 
 }
