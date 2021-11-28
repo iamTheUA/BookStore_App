@@ -21,7 +21,7 @@ export class UserService {
 
   loginUser(token: any) {
     localStorage.setItem("token", token)
-    this.getUserByToken(token).subscribe((n: any) => {
+    this.getUserByToken().subscribe((n: any) => {
       localStorage.setItem("userId", n.data.id.toString());
       localStorage.setItem("userName", n.data.fullName);
     })
@@ -48,7 +48,8 @@ export class UserService {
     return localStorage.getItem("token")
   }
 
-  getUserByToken(token: String) {
+  getUserByToken() {
+    let token = localStorage.getItem("token")
     return this.http.get<any>(this.baseUrl + "/id/" + token)
   }
 
@@ -65,7 +66,7 @@ export class UserService {
     return this.http.post<any>(this.baseUrl + '/reset-password', { "token": inputToken, "newPassword": inputNewPassword })
   }
 
-  userAddress(addressInfo: addressModel,) {
+  userAddress(addressInfo: addressModel) {
     let userId = localStorage.getItem("userId");
     return this.http.post<any>(this.baseUrl + '/address/' + userId, addressInfo)
   }

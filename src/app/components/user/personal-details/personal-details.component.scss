@@ -20,10 +20,21 @@
         font-weight: bold;
     }
     
-    .h1 {
+    .work {
+        font-family: Roboto;
+        font-size: 16px;
+        padding: 5px;
+        border-color: #b4b4b4;
+    }
+    .worklabel{
         font-family: Roboto;
         font-size: 18px;
         font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .workrow{
+        padding-top: 20px;
     }
     
     .edit {
@@ -57,6 +68,8 @@
         text-transform: capitalize;
         font-weight: bold;
         opacity: 1;
+        padding-top: 10px;
+        padding-bottom: 8px;
     }
     
     .input {
@@ -115,6 +128,7 @@
         font-family: Roboto;
         font-size: 16px;
         font-weight: bold;
+        padding-top: 10px;
     }
     
     .save {
@@ -155,12 +169,7 @@
         margin-left: 140px;
     }
     
-    .work {
-        font-family: Roboto;
-        font-size: 16px;
-        padding: 5px;
-        border-color: #b4b4b4;
-    }
+    
     
     .radio3 {
         margin-top: -20px;
@@ -172,4 +181,31 @@
         font-family: Roboto;
         font-size: 16px;
         border-color: #b4b4b4;
+    }
+
+    .state{
+        font-family: ROBOTO;
+        font-size: 16px;
+        text-align: left;
+        letter-spacing: 0px;
+        color: #0A0102;
+        text-transform: capitalize;
+        font-weight: bold;
+        opacity: 1;
+        padding-top: 5px;
+        padding-bottom: 2px;
+
+    }
+
+    .typerow{
+        font-family: ROBOTO;
+        font-size: 16px;
+        text-align: left;
+        letter-spacing: 0px;
+        color: #0A0102;
+        text-transform: capitalize;
+        font-weight: bold;
+        opacity: 1;
+        padding-top: 18px;
+
     }
