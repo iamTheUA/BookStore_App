@@ -16,11 +16,11 @@
                 <div class="author">by: {{book.bookList[0].author}}</div>
                 <div class="price">
                     <div class="book-price">Rs.{{book.totalPrice}}</div>
-                    <div class="discount-price">Rs.{{book.totalPrice}}</div>
+                    <div class="discount-price">Rs.{{book.totalPrice - book.totalPrice*0.3}}</div>
                 </div>
             </div>
             <div class="order-placed">
-                Order Placed On 21 May 2020 </div>
+                {{book.registerDate}}  </div>
         </div>
     </div>
 </div>
