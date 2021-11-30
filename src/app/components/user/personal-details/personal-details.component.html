@@ -54,16 +54,17 @@
         <span>Type</span>
     </div>
 
-    <div class="radio1">
-        <input type="radio" id="home" name="type" [(ngModel)]="addressmodel.type" value="1">
-        <label class="homs" for="home">Home</label><br>
+    <div class="radio1" (click)="typeCall(1)">
+        <input type="radio" checked=type[0] id="home" name="type" value="1">
+        <label class="homes" for="home">Home</label><br>
     </div>
-    <div class="radio2">
-        <input type="radio" id="work" name="type" [(ngModel)]="addressmodel.type" value="2">
-        <label class="work" for="work">Work</label><br>
+
+    <div class="radio2" (click)="typeCall(2)">
+        <input type="radio" x id="work" name="type" value="2">
+        <label class="homes" for="work">Work</label><br>
     </div>
-    <div class="radio3">
-        <input type="radio" id="other" name="type" [(ngModel)]="addressmodel.type" value="3">
+    <div class="radio3" (click)="typeCall(3)">
+        <input type="radio" id="other" name="type" value="3">
         <label class="other" for="other">Other</label>
     </div>
 
