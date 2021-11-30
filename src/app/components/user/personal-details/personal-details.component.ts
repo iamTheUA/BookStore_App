@@ -25,6 +25,8 @@ export class PersonalDetailsComponent implements OnInit {
     phoneNumber: 0
   }
 
+  public type = [true, false, false];
+
   token = localStorage.getItem("token")
   newPassword: any = null;
 
@@ -67,28 +69,7 @@ export class PersonalDetailsComponent implements OnInit {
   }
 
   getUserAddress() {
-    this.service.getuserAddress(this.addressmodel.type).subscribe(
-      data => {
-        if (data != null) {
-          this.addressmodel = data.data
-          console.log(this.addressmodel)
-        }
-        else {
-          this.addressmodel = {
-            name: '',
-            pincode: '',
-            locality: '',
-            address: '',
-            city: '',
-            landmark: '',
-            type: 1
-          }
-        }
-
-      }
-
-    )
-
+    this.service.getuserAddress(1).subscribe(n => { console.log(n); this.addressmodel = n.data });
   }
   getUserPersonDetails() {
 
@@ -113,6 +94,28 @@ export class PersonalDetailsComponent implements OnInit {
       console.log(this.usermodel.password);
     }
 
+  }
+
+  typeCall(type: number) {
+    this.service.getuserAddress(type).subscribe(n => {
+      console.log(n);
+      if (n.data) {
+        this.addressmodel = n.data
+      } else {
+        this.addressmodel = {
+          name: '',
+          pincode: '',
+          locality: '',
+          address: '',
+          city: '',
+          landmark: '',
+          type: type
+        }
+      }
+    });
+    this.type[0] = false;
+    this.type[type - 1] = true;
+    return true;
   }
 
 
