@@ -19,24 +19,22 @@ import { CustomerOrderSummaryComponent } from './components/book/customer-order-
 import { LoginRequestComponent } from './components/user/login-request/login-request.component';
 import { MyordersComponent } from './components/user/myorders/myorders.component';
 const routes: Routes = [
-  { path: "login", component: LoginComponent },
+  { path: "login", component: LoginComponent  },
   { path: "signup", component: SigninComponent },
   { path: "reset-password/:token", component: ResetPasswordComponent },
   { path: "book-details/:bookId", component: BookDetailsComponent },
   { path: "header", component: HeaderComponent },
   { path: "footer", component: FooterComponent },
   { path: "headersearch", component: HeaderSearchComponent },
-  { path: "booklist", component: BooklistComponent },
-  { path: "myorders", component: MyordersComponent },
+  { path: "booklist", component: BooklistComponent, canActivate: [AuthGuard] },
+  { path: "myorders", component: MyordersComponent, canActivate: [AuthGuard] },
   { path: "forget-password", component: ForgetPasswordComponent },
   { path: "login-request", component: LoginRequestComponent },
-  { path: "wishlist", component: WishlistComponent },
-  { path: "personal-details", component: PersonalDetailsComponent },
+  { path: "wishlist", component: WishlistComponent, canActivate: [AuthGuard] },
+  { path: "personal-details", component: PersonalDetailsComponent, canActivate: [AuthGuard] },
   { path: "loginrequest", component: LoginRequestComponent },
-  { path: "greeting", component: OrderGreetingComponent },
-  { path: "wishlist", component: WishlistComponent },
-  { path: "login-request", component: LoginRequestComponent },
-  { path: "mycart", component: CartComponent },
+  { path: "greeting", component: OrderGreetingComponent, canActivate: [AuthGuard] },
+  { path: "mycart", component: CartComponent , canActivate: [AuthGuard]},
   { path: "place-order-request", component: PlaceOrderRequestComponent },
   { path: "customer-order-summary", component: CustomerOrderSummaryComponent }
 
